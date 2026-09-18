@@ -31,7 +31,7 @@
 
                 if (exam is PracticalExam)
                 {
-                    // Practical Exam → MCQ فقط
+                    // Practical Exam  MCQ فقط
                     Console.Write("Please enter the question body: ");
                     string body = Console.ReadLine();
 
@@ -115,12 +115,12 @@
                     {
                         if (userAnswer == mcq.CorrectAnswer)
                         {
-                            Console.WriteLine("✅ Correct!\n");
+                            Console.WriteLine(" Correct!\n");
                             userScore += mcq.Mark;
                         }
                         else
                         {
-                            Console.WriteLine($"❌ Wrong! Correct answer is: {mcq.Choices[mcq.CorrectAnswer - 1]}\n");
+                            Console.WriteLine($" Wrong! Correct answer is: {mcq.Choices[mcq.CorrectAnswer - 1]}\n");
                         }
                         totalMarks += mcq.Mark;
                     }
@@ -129,12 +129,12 @@
                         bool userBool = userAnswer == 1;
                         if (userBool == tf.CorrectAnswer)
                         {
-                            Console.WriteLine("✅ Correct!\n");
+                            Console.WriteLine(" Correct!\n");
                             userScore += tf.Mark;
                         }
                         else
                         {
-                            Console.WriteLine($"❌ Wrong! Correct answer is: {(tf.CorrectAnswer ? "True" : "False")}\n");
+                            Console.WriteLine($" Wrong! Correct answer is: {(tf.CorrectAnswer ? "True" : "False")}\n");
                         }
                         totalMarks += tf.Mark;
                     }
